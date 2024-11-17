@@ -9,4 +9,4 @@ def post_list(request):
         "posts": posts
 
     }
-    return render(request, "blog/post_list.html", context)
+    return render(request, "post_list.html", context)

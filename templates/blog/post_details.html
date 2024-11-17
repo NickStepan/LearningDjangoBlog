@@ -1,0 +1,7 @@
+<h1>{{ post.title }}</h1>
+<p>{{ post.content }}</p>
+<p>{{ post.author }}</p>
+<p>{{ published_recently }}</p>
+{% for comment in post.comments.all() %}
+    <p>Author: {{ comment.author }}, Text: {{ comment.text }}<br>Date: {{ comment.created_at }}</p>
+{% endfor %}

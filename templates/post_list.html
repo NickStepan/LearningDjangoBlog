@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список Постів</title>
+</head>
+<body>
+    <h1>Список Постів</h1>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.content }}</p>
+                <small>Опубліковано: {{ post.published_date }}</small>
+            </li>
+        {% empty %}
+            <li>Немає постів для відображення.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
